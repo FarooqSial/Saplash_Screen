@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:saplash_screen/five_page.dart';
+import 'package:saplash_screen/On_Boarding_Screen3.dart';
+import 'package:saplash_screen/Login_Screen.dart';
 
-class SixthPage extends StatelessWidget {
-  const SixthPage({Key? key}) : super(key: key);
+class FivethPage extends StatelessWidget {
+  const FivethPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class SixthPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FivethPage(),
+                  builder: (context) => FourthPage(),
                 ),
               );
             },
@@ -31,7 +32,7 @@ class SixthPage extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 150),
+                padding: const EdgeInsets.only(right: 80),
                 child: Stack(
                   children: [
                     Padding(
@@ -48,7 +49,7 @@ class SixthPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 45, left: 45),
                       child: Text(
-                        'Welcome Back',
+                        'Create a New Account',
                         style: TextStyle(
                           fontSize: 21,
                           fontFamily: 'PoppinsSemiBold',
@@ -62,7 +63,7 @@ class SixthPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Text(
-                  'I am very happy to see you. you can continue\n to login for latest Racipes',
+                  'Create an account so you can see  our\n latest Racipes',
                   style: TextStyle(
                     color: Color(0xffADAAAA),
                     fontSize: 12,
@@ -71,7 +72,47 @@ class SixthPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 200, top: 40),
+                padding: const EdgeInsets.only(right: 200, top: 20),
+                child: Text(
+                  'Name',
+                  style: TextStyle(
+                    color: Color(0xffADAAAA),
+                    fontSize: 10,
+                    fontFamily: 'PoppinsRegular',
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 5),
+                child: Container(
+                  height: 31,
+                  width: 248,
+                  child: TextField(
+                    decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(top: 2, left: 10),
+                        hintText: 'Username',
+                        filled: true,
+                        fillColor: Colors.white,
+                        border: InputBorder.none,
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(14)),
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Color(0xffF7BB0E),
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(14)),
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Color(0xffF7BB0E),
+                          ),
+                        )),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 200, top: 15),
                 child: Text(
                   'Email',
                   style: TextStyle(
@@ -153,33 +194,59 @@ class SixthPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10, right: 80),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      'Forget Password',
-                      style: TextStyle(
-                        color: Color(0xff969494),
-                        fontSize: 10,
-                        fontFamily: 'PoppinsMedium',
-                      ),
-                    ),
-                  ],
+                padding: const EdgeInsets.only(right: 150, top: 15),
+                child: Text(
+                  'Confirm Password',
+                  style: TextStyle(
+                    color: Color(0xffADAAAA),
+                    fontSize: 10,
+                    fontFamily: 'PoppinsRegular',
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 80),
+                padding: const EdgeInsets.only(top: 5),
+                child: Container(
+                  height: 31,
+                  width: 248,
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                        contentPadding: EdgeInsets.only(top: 2, left: 10),
+                        hintText: 'Confirm Password',
+                        filled: true,
+                        fillColor: Colors.white,
+                        border: InputBorder.none,
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(14)),
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Color(0xffF7BB0E),
+                          ),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(14)),
+                          borderSide: BorderSide(
+                            width: 2,
+                            color: Color(0xffF7BB0E),
+                          ),
+                        )),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 50),
                 child: Container(
                   height: 36,
-                  width: 148,
+                  width: 223,
                   decoration: BoxDecoration(
                     color: Color(0xffF7BB0E),
                     borderRadius: BorderRadius.circular(29),
                   ),
                   child: Center(
                     child: Text(
-                      'LOGIN',
+                      'SIGNUP',
                       style: TextStyle(
                         color: Color(0xff000000),
                         fontSize: 12,
@@ -190,12 +257,44 @@ class SixthPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 280),
+                padding: const EdgeInsets.only(top: 50),
+                child: Container(
+                  height: 36,
+                  width: 223,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF7BB0E),
+                    borderRadius: BorderRadius.circular(29),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Image(
+                        width: 24,
+                        height: 24,
+                        image: AssetImage('images/google.png'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 65),
+                        child: Text(
+                          'SIGNUP',
+                          style: TextStyle(
+                            color: Color(0xff000000),
+                            fontSize: 12,
+                            fontFamily: 'PoppinsSemiBold',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 140),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Don't have an account",
+                      'Already have an account',
                       style: TextStyle(
                         color: Color(0xff000000),
                         fontSize: 12,
@@ -205,12 +304,14 @@ class SixthPage extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => FivethPage()));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SixthPage(),
+                          ),
+                        );
                       },
                       child: Text(
-                        '  SIGNUP',
+                        '  login',
                         style: TextStyle(
                           color: Color(0xffF7BB0E),
                           fontSize: 12,

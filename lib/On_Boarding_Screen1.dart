@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:saplash_screen/five_page.dart';
-import 'package:saplash_screen/three_page.dart';
+import 'package:saplash_screen/Sigup_Screen.dart';
+import 'package:saplash_screen/On_Boarding_Screen2.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);

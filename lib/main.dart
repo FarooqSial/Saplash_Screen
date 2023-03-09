@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:saplash_screen/saplash_screen.dart';
+import 'package:saplash_screen/Saplash_Screen.dart';
 
 void main() {
   runApp(MyApp());

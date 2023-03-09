@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:saplash_screen/five_page.dart';
-import 'package:saplash_screen/four_page.dart';
+import 'package:saplash_screen/Sigup_Screen.dart';
 
-class ThirdPage extends StatelessWidget {
-  const ThirdPage({Key? key}) : super(key: key);
+class FourthPage extends StatelessWidget {
+  const FourthPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,41 +12,15 @@ class ThirdPage extends StatelessWidget {
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 8.0, right: 8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => FivethPage(),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      'Skip',
-                      style: TextStyle(
-                        color: Color(0xff999999),
-                        fontSize: 15,
-                        fontFamily: 'PoppinsMedium',
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
               padding: const EdgeInsets.only(top: 100),
               child: Image(
-                image: AssetImage('images/second.png'),
+                image: AssetImage('images/first.png'),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50),
               child: Text(
-                'Get the exact nutrition',
+                'Get daily calorie target',
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontFamily: 'PoppinsMedium',
@@ -56,7 +29,7 @@ class ThirdPage extends StatelessWidget {
               ),
             ),
             Text(
-              'values of every thing you eat',
+              'based on your body weight',
               style: TextStyle(
                 color: Color(0xff000000),
                 fontFamily: 'PoppinsMedium',
@@ -66,7 +39,7 @@ class ThirdPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Text(
-                'we are updating our food database every',
+                'Set your target weight and select your',
                 style: TextStyle(
                   color: Color(0xffACACAC),
                   fontFamily: 'PoppinsRegular',
@@ -75,7 +48,7 @@ class ThirdPage extends StatelessWidget {
               ),
             ),
             Text(
-              "minute to help you track your calories",
+              "monthly schedule, and we'ill do the rest",
               style: TextStyle(
                 color: Color(0xffACACAC),
                 fontFamily: 'PoppinsRegular',
@@ -84,19 +57,32 @@ class ThirdPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: FloatingActionButton(
-                backgroundColor: Color(0xffF7BB0E),
-                onPressed: () {
+              child: GestureDetector(
+                onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => FourthPage(),
+                      builder: (context) => FivethPage(),
                     ),
                   );
                 },
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: Color(0xff000000),
+                child: Container(
+                  height: 36,
+                  width: 148,
+                  decoration: BoxDecoration(
+                    color: Color(0xffF7BB0E),
+                    borderRadius: BorderRadius.circular(29),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'GET STARTED',
+                      style: TextStyle(
+                        color: Color(0xff000000),
+                        fontSize: 15,
+                        fontFamily: 'PoppinsSemiBold',
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:saplash_screen/five_page.dart';
+import 'package:saplash_screen/Sigup_Screen.dart';
+import 'package:saplash_screen/On_Boarding_Screen3.dart';
 
-class FourthPage extends StatelessWidget {
-  const FourthPage({Key? key}) : super(key: key);
+class ThirdPage extends StatelessWidget {
+  const ThirdPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +13,41 @@ class FourthPage extends StatelessWidget {
         body: Column(
           children: [
             Padding(
+              padding: const EdgeInsets.only(top: 8.0, right: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FivethPage(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'Skip',
+                      style: TextStyle(
+                        color: Color(0xff999999),
+                        fontSize: 15,
+                        fontFamily: 'PoppinsMedium',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
               padding: const EdgeInsets.only(top: 100),
               child: Image(
-                image: AssetImage('images/first.png'),
+                image: AssetImage('images/second.png'),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50),
               child: Text(
-                'Get daily calorie target',
+                'Get the exact nutrition',
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontFamily: 'PoppinsMedium',
@@ -29,7 +56,7 @@ class FourthPage extends StatelessWidget {
               ),
             ),
             Text(
-              'based on your body weight',
+              'values of every thing you eat',
               style: TextStyle(
                 color: Color(0xff000000),
                 fontFamily: 'PoppinsMedium',
@@ -39,7 +66,7 @@ class FourthPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Text(
-                'Set your target weight and select your',
+                'we are updating our food database every',
                 style: TextStyle(
                   color: Color(0xffACACAC),
                   fontFamily: 'PoppinsRegular',
@@ -48,7 +75,7 @@ class FourthPage extends StatelessWidget {
               ),
             ),
             Text(
-              "monthly schedule, and we'ill do the rest",
+              "minute to help you track your calories",
               style: TextStyle(
                 color: Color(0xffACACAC),
                 fontFamily: 'PoppinsRegular',
@@ -57,32 +84,19 @@ class FourthPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: GestureDetector(
-                onTap: () {
+              child: FloatingActionButton(
+                backgroundColor: Color(0xffF7BB0E),
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => FivethPage(),
+                      builder: (context) => FourthPage(),
                     ),
                   );
                 },
-                child: Container(
-                  height: 36,
-                  width: 148,
-                  decoration: BoxDecoration(
-                    color: Color(0xffF7BB0E),
-                    borderRadius: BorderRadius.circular(29),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'GET STARTED',
-                      style: TextStyle(
-                        color: Color(0xff000000),
-                        fontSize: 15,
-                        fontFamily: 'PoppinsSemiBold',
-                      ),
-                    ),
-                  ),
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Color(0xff000000),
                 ),
               ),
             ),
